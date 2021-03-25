@@ -35,10 +35,12 @@ import urllib
 Shopping_Dictionary = {}
 
 def List_Printer(Shopping_Dictionary):
-    counter = 0
-    for i in Shopping_Dictionary:
-        print(i, "name-quantity-cost", Shopping_Dictionary[i])
-        counter += 1
+    if(len(Shopping_Dictionary) == 0):
+        print("total cost of the elements in the dictionary is 0")
+    else:
+        for i in Shopping_Dictionary:
+            print(
+                "quantity: ", Shopping_Dictionary[i][0], "cost: ", Shopping_Dictionary[i][1])
 
 def List_Adder(Shopping_Dictionary):
     food_name = input("name of the product : ")
@@ -61,8 +63,13 @@ def List_Searcher(Shopping_Dictionary):
             print("item found : ", i, " - ", Shopping_Dictionary.keys())
 
 def List_T_Cost_Printer(Shopping_Dictionary):
-    for i in Shopping_Dictionary:
-            print("total cost of the Shopping_Dictionary : ", i, " - ", Shopping_Dictionary.keys())
+    if(len(Shopping_Dictionary) == 0 ):
+        print("total cost of the elements in the dictionary is 0")
+    else:
+        for i in Shopping_Dictionary:
+            print("quantity: ", Shopping_Dictionary[i][0],"cost: ", Shopping_Dictionary[i][1])
+            dfgfdsdgfzd = Shopping_Dictionary[i][1]
+            print("kpop", dfgfdsdgfzd)
 
 def list_Menu():
     print("1-ADDING METHOD")
